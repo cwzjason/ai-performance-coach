@@ -484,6 +484,7 @@
   </div>
 </div>
 
+<script src="config.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 <script>
 const { createApp, ref, reactive, nextTick, computed, watch } = Vue;
@@ -579,7 +580,7 @@ createApp({
     const aiError = ref('');       // 错误信息
 
     const AI_API_URL = 'https://api.siliconflow.cn/v1/chat/completions';
-    const AI_API_KEY = 'YOUR_SILICONFLOW_API_KEY';  // 替换为你的 API Key: https://cloud.siliconflow.cn/
+    const AI_API_KEY = window.__AI_API_KEY__ || 'YOUR_SILICONFLOW_API_KEY';
     const AI_MODEL = 'Qwen/Qwen2.5-7B-Instruct';
 
     async function callAI(messages, systemPrompt, retryCount = 0) {

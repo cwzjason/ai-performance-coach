@@ -1,89 +1,93 @@
-# AI 绩效面谈陪练师
+# AI Performance Review Coach
 
-> 帮新晋管理者完成第一次"不翻车"的绩效反馈对话 — 一款基于 Web 的交互式绩效面谈模拟训练工具。
+> Help new managers nail their first performance feedback conversation without a hitch — an interactive web-based simulation training tool.
 
-## 项目简介
+[中文文档](./README_CN.md)
 
-绩效面谈是管理者最核心、也最容易翻车的管理动作。说轻了没效果，说重了员工离职，说偏了变成人身攻击。**AI 绩效面谈陪练师** 让你在一个安全的模拟环境中，与 AI 扮演的"真实员工"进行一对一绩效面谈，并在结束后获得多维度评估报告和改进建议。
+## Overview
 
-### 核心价值
+Performance reviews are one of the most critical — and risky — actions for any manager. Too soft and it's ineffective; too harsh and employees may quit; off-target and it becomes personal. **AI Performance Review Coach** lets you practice one-on-one performance conversations with AI-simulated "real employees" in a safe environment, then provides a multi-dimensional evaluation report and improvement suggestions afterward.
 
-- **零风险试错** — 在虚拟环境中反复练习，不怕说错话、不怕搞砸关系
-- **真实员工模拟** — AI 根据员工画像（高潜/中坚/待提升）动态生成情绪反应
-- **即时反馈** — 结束后自动生成绩效面谈质量评分报告，指出踩坑点
-- **场景化训练** — 5 种常见问题场景 + 自定义背景，覆盖 3x5=15 种组合
+### Core Value
 
-## 🌐 在线访问
+- **Zero-risk practice** — Rehearse in a virtual environment without fear of saying the wrong thing or damaging relationships
+- **Realistic employee simulation** — AI dynamically generates emotional responses based on employee profiles (High-Potential / Steady / Needs Improvement)
+- **Instant feedback** — Automatically generates a performance review quality score report with flagged pitfalls
+- **Scenario-based training** — 5 common problem scenarios + custom backgrounds, covering 3×5=15 combinations
 
-👉 **[打开即用](https://cwz-d2glf6xtm409cbb3a-1438121806.tcloudbaseapp.com/ai-performance-coach.html)**
+## 🌐 Live Demo
 
-无需注册、无需安装，浏览器打开即可使用。
+👉 **[Open and use](https://cwz-d2glf6xtm409cbb3a-1438121806.tcloudbaseapp.com/ai-performance-coach.html)**
 
-## ✨ 功能特性
+No registration, no installation — just open in your browser.
 
-### 🎭 模拟面谈对话
+## ✨ Features
 
-| 功能 | 说明 |
-|------|------|
-| AI 驱动员工 | 基于 LLM 大语言模型，根据你的发言实时生成有情绪、有个性的回复 |
-| 员工状态机 | 员工的信任度/开放度/情绪会随你的对话策略动态变化 |
-| 快捷话术按钮 | 开场寒暄、提问倾听、引导改进、结束面谈 — 一键发送常用话术 |
-| 打字机动画 | 员工回复带逐字动画效果，增强沉浸感 |
+### 🎭 Simulated Conversations
 
-### 👥 三种员工画像
+| Feature | Description |
+|---------|-------------|
+| AI-Driven Employee | Based on LLM, generates emotional and personality-driven responses in real time |
+| Employee State Machine | Trust, openness, and mood change dynamically based on your conversation strategy |
+| Quick Reply Buttons | Opening, listening, guiding, closing — one-click common phrases |
+| Typewriter Animation | Employee replies with character-by-character animation for enhanced immersion |
 
-| 类型 | 姓名 | 职位 | 特质 | 应对要点 |
-|------|------|------|------|----------|
-| 高潜员工 | 张明远 | 高级研发工程师 | 能力强、有主见、期望晋升、自尊心强 | 给尊重、谈发展、少指令 |
-| 中坚力量 | 李稳 | 资深运营专员 | 稳定可靠、经验丰富、被动沟通、有家庭压力 | 多倾听、给安全感、循序渐进 |
-| 待改进 | 王小明 | 初级产品助理 | 能力待提升、缺乏方向感、容易焦虑 | 给方向、具体反馈、鼓励为主 |
+### 👥 Three Employee Profiles
 
-### 🎯 五种问题场景
+| Type | Name | Role | Traits | Key Approach |
+|------|------|------|--------|--------------|
+| High-Potential | Zhang Mingyuan | Senior R&D Engineer | Capable, opinionated, expects promotion, high self-esteem | Show respect, discuss growth, avoid commanding |
+| Steady Performer | Li Wen | Senior Operations Specialist | Reliable, experienced, passive communicator, family pressures | Listen more, provide security, take it step by step |
+| Needs Improvement | Wang Xiaoming | Junior Product Assistant | Needs growth, lacks direction, easily anxious | Give direction, specific feedback, focus on encouragement |
 
-- 交付延迟 — 项目进度滞后
-- 协作差 — 跨团队沟通不畅
-- 缺乏主动性 — 安于现状不进取
-- 质量问题 — 产出质量不稳定
-- 态度问题 — 消极抱怨影响团队
+### 🎯 Five Problem Scenarios
 
-### 📊 智能评估报告
+- Delivery Delays — Project behind schedule
+- Poor Collaboration — Cross-team communication breakdown
+- Lack of Initiative — Complacency and lack of drive
+- Quality Issues — Inconsistent output quality
+- Attitude Problems — Negative complaints affecting team morale
 
-面谈结束后自动从 **5 个维度** 进行评分：
+### 📊 Smart Evaluation Report
+
+Automatic scoring across **5 dimensions** after each session:
 
 ```
-┌─────────────┬──────────────────────────────────────────┐
-│ 维度        │ 检测逻辑                                  │
-├─────────────┼──────────────────────────────────────────┤
-│ 共情倾听    │ 是否认可员工付出、询问感受                 │
-│ 归因澄清    │ 是否用开放式提问了解员工视角               │
-│ 具体反馈    │ 是否用 STAR 原则举出具体事例              │
-│ 改进计划    │ 是否共同制定可执行的下一步行动             │
-│ 目标对齐    │ 是否关联个人成长与团队发展方向             │
-└─────────────┴──────────────────────────────────────────┘
+┌─────────────────────┬──────────────────────────────────────────────────┐
+│ Dimension           │ Detection Logic                                  │
+├─────────────────────┼──────────────────────────────────────────────────┤
+│ Empathy & Listening │ Did you acknowledge effort & ask about feelings? │
+│ Attribution         │ Did you use open-ended questions to understand   │
+│                     │ their view?                                      │
+│ Specific Feedback   │ Did you use STAR method with concrete examples?  │
+│ Improvement Plan    │ Did you co-create actionable next steps?         │
+│ Goal Alignment      │ Did you connect personal growth to team          │
+│                     │ direction?                                       │
+└─────────────────────┴──────────────────────────────────────────────────┘
 ```
 
-**扣分项检测：**
-- 人身攻击 / 标签化 → -2.0 分
-- 归咎指责（都是因为你...）→ -0.8 分
-- 模糊评价（要努力但无具体事例）→ -0.5 分
+**Penalty detection:**
+- Personal attacks / labeling → -2.0 points
+- Blame ("It's all your fault...") → -0.8 points
+- Vague feedback (effort without specifics) → -0.5 points
 
-**输出内容：**
-- 综合评分（1~5 分，星级展示）
-- 各维度完成情况（✅ 已覆盖 / ❌ 未涉及）
-- 缺失的关键动作及推荐话术
-- 踩坑提醒（如有）
-- 改进建议清单
+**Output:**
+- Overall score (1–5, star display)
+- Dimension completion status (✅ Covered / ❌ Not covered)
+- Missing key actions with recommended phrases
+- Pitfall alerts (if any)
+- Improvement checklist
 
-## 🛠 技术架构
+## 🛠 Tech Stack
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│                   浏览器 (前端)                        │
+│                   Browser (Frontend)                  │
 │  ┌────────────────────────────────────────────────┐  │
-│  │   Vue 3 (CDN) + 单文件 HTML 应用                │  │
-│  │   • 对话界面 / 员工状态机 / 规则引擎            │  │
-│  │   • 评估系统 (关键词分析 + 打分)                │  │
-│  │   • SiliconFlow API 直连 (AI 对话)             │  │
+│  │   Vue 3 (CDN) + Single-file HTML App           │  │
+│  │   • Chat UI / Employee State Machine / Rules   │  │
+│  │   • Evaluation System (keyword + scoring)      │  │
+│  │   • SiliconFlow API (AI conversations)         │  │
 │  └────────────────────────────────────────────────┘  │
 └──────────────────────┬───────────────────────────────┘
                        │ HTTPS (REST API)
@@ -91,61 +95,62 @@
            ┌───────────────────────┐
            │   SiliconFlow API     │
            │   Qwen2.5-7B-Instruct │
-           │   (大语言模型)         │
+           │   (LLM)               │
            └───────────────────────┘
 ```
 
-| 层级 | 技术 | 说明 |
-|------|------|------|
-| 前端框架 | Vue 3 (CDN Production Build) | 单文件 HTML，无需构建工具 |
-| UI 组件 | TDesign Vue Next + 自定义 CSS | 渐变风格、圆角卡片、动画过渡 |
-| AI 引擎 | SiliconFlow OpenAI 兼容 API | Qwen/Qwen2.5-7B-Instruct 模型 |
-| 评估引擎 | 关键词匹配 + 规则打分（兜底） | 5 维度评分 + 踩坑检测 |
-| 部署平台 | CloudBase 静态托管 | CDN 加速，全球可访问 |
+| Layer | Technology | Notes |
+|-------|-----------|-------|
+| Frontend | Vue 3 (CDN Production Build) | Single HTML file, no build tools needed |
+| UI Components | TDesign Vue Next + Custom CSS | Gradient style, rounded cards, animated transitions |
+| AI Engine | SiliconFlow OpenAI-compatible API | Qwen/Qwen2.5-7B-Instruct model |
+| Evaluation Engine | Keyword matching + rule-based scoring (fallback) | 5-dimension scoring + pitfall detection |
+| Deployment | CloudBase Static Hosting | CDN-accelerated, globally accessible |
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 vibecoding/
-├── ai-performance-coach.html    # 主应用 — 前端单页应用 (~1560 行)
-│   ├── HTML 结构 (聊天面板 / 配置区 / 评估弹窗)
-│   ├── CSS 样式 (渐变主题 / 动画 / 响应式)
-│   └── JavaScript (Vue 3 / 状态机 / AI 调用 / 评估系统)
-├── server.py                    # Python 本地开发服务器（可选）
-├── server.js                    # Node.js 本地开发服务器（可选）
-├── cloudfunctions/              # 云函数（预留）
+├── ai-performance-coach.html    # Main app — Frontend SPA (~1560 lines)
+│   ├── HTML (Chat panel / Config area / Evaluation modal)
+│   ├── CSS (Gradient theme / Animations / Responsive)
+│   └── JavaScript (Vue 3 / State machine / AI calls / Evaluation system)
+├── server.py                    # Python local dev server (optional)
+├── server.js                    # Node.js local dev server (optional)
+├── cloudfunctions/              # Cloud Functions (reserved)
 │   ├── index.js
 │   └── package.json
-└── README.md                    # 项目文档
+├── cloudrun/                    # CloudRun backend services
+├── README.md                    # Documentation (English)
+└── README_CN.md                 # Documentation (Chinese)
 ```
 
-## 🚀 使用指南
+## 🚀 How to Use
 
-1. **选择场景** — 在左侧配置面板选择员工类型、绩效等级和问题场景
-2. **开始面谈** — 点击「开始面谈练习」进入对话
-3. **进行对话** — 在输入框输入你的面谈话术，按 Enter 发送；或使用快捷话术按钮
-4. **观察反应** — 注意员工的情绪变化（紧张→防御→谨慎→开放→合作）
-5. **结束面谈**— 点击「结束面谈并打分」或在对话中说"面谈结束"
-6. **查看报告** — 阅读评估报告，了解自己的优势和需要改进的地方
-7. **重新练习** — 点击「再来一局」换一个场景继续练习
+1. **Choose a scenario** — Select employee type, performance rating, and problem scenario in the left config panel
+2. **Start the session** — Click "Start Practice" to begin the conversation
+3. **Have the conversation** — Type your coaching phrases and press Enter; or use quick reply buttons
+4. **Watch reactions** — Observe changes in employee mood (Tense → Defensive → Cautious → Open → Collaborative)
+5. **End the session** — Click "End & Score" or say "end the review" in conversation
+6. **Read the report** — Review your evaluation to understand strengths and areas for improvement
+7. **Practice again** — Click "New Session" to try a different scenario
 
-## 💡 面谈技巧速查
+## 💡 Coaching Tips at a Glance
 
-> 面谈 = 先建立连接 → 再展开事实 → 最后达成共识
+> Review = Connect → Present facts → Reach consensus
 
-1. **开场先共情**："我注意到你最近加班很多，辛苦了。先跟我说说最近的感受？"
-2. **多问开放式问题**："你怎么看？""你觉得原因可能有哪些？"
-3. **反馈要有具体事例**："比如上周的 XX 需求..."
-4. **共同制定计划**："我们定接下来两周的目标，你觉得可以从哪里开始？"
-5. **关联个人发展**："这个做好了对你未来的职业路径很有帮助"
+1. **Start with empathy**: "I've noticed you've been working late a lot lately — thank you. How have things been feeling?"
+2. **Ask open-ended questions**: "What's your take?" "What do you think might be causing this?"
+3. **Give feedback with specifics**: "For example, the XX requirement last week..."
+4. **Co-create the plan**: "Let's set goals for the next two weeks — where do you think we could start?"
+5. **Link to personal growth**: "Getting this right will really help your career path"
 
-## 📦 本地开发
+## 📦 Local Development
 
 ```powershell
-# 直接在浏览器打开即可运行
-# 或启动本地服务器（解决 CORS 问题）:
+# Open directly in browser, or start a local server (for CORS):
 python server.py
-# 或
+# or
 node server.js
 ```
 

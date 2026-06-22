@@ -293,16 +293,16 @@
     <div class="app-header-left">
       <div class="app-logo">💬</div>
       <div>
-        <div class="app-title">{{ _t('header.title') }}</div>
-        <div class="app-subtitle">{{ _t('header.subtitle') }}</div>
+        <div class="app-title">{{ tt('header.title') }}</div>
+        <div class="app-subtitle">{{ tt('header.subtitle') }}</div>
       </div>
     </div>
     <div class="app-header-right">
-      <button class="lang-switch" @click="toggleLang" :title="_t('header.switchLang')">
+      <button class="lang-switch" @click="toggleLang" :title="tt('header.switchLang')">
         🌐 {{ lang === 'zh' ? 'English' : '中文' }}
       </button>
-      <span class="header-badge">🏆 {{ _t('header.badge1') }}</span>
-      <span class="header-badge">👥 {{ _t('header.badge2') }}</span>
+      <span class="header-badge">🏆 {{ tt('header.badge1') }}</span>
+      <span class="header-badge">👥 {{ tt('header.badge2') }}</span>
     </div>
   </header>
 
@@ -312,64 +312,64 @@
     <aside class="side-panel">
 
       <div class="config-card">
-        <h3>⚙️ {{ _t('config.title') }}</h3>
+        <h3>⚙️ {{ tt('config.title') }}</h3>
         <div class="form-group">
-          <label class="form-label">👤 {{ _t('config.employeeType') }}</label>
+          <label class="form-label">👤 {{ tt('config.employeeType') }}</label>
           <select v-model="config.employeeType" :disabled="sessionActive">
-            <option value="high_potential">{{ _t('config.employeeTypeOptions.high_potential') }}</option>
-            <option value="steady">{{ _t('config.employeeTypeOptions.steady') }}</option>
-            <option value="needs_improve">{{ _t('config.employeeTypeOptions.needs_improve') }}</option>
+            <option value="high_potential">{{ tt('config.employeeTypeOptions.high_potential') }}</option>
+            <option value="steady">{{ tt('config.employeeTypeOptions.steady') }}</option>
+            <option value="needs_improve">{{ tt('config.employeeTypeOptions.needs_improve') }}</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">📊 {{ _t('config.performanceLevel') }}</label>
+          <label class="form-label">📊 {{ tt('config.performanceLevel') }}</label>
           <select v-model="config.performanceLevel" :disabled="sessionActive">
-            <option value="A">{{ _t('config.perfLevelOptions.A') }}</option>
-            <option value="B">{{ _t('config.perfLevelOptions.B') }}</option>
-            <option value="C">{{ _t('config.perfLevelOptions.C') }}</option>
+            <option value="A">{{ tt('config.perfLevelOptions.A') }}</option>
+            <option value="B">{{ tt('config.perfLevelOptions.B') }}</option>
+            <option value="C">{{ tt('config.perfLevelOptions.C') }}</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">🎯 {{ _t('config.problemScenario') }}</label>
+          <label class="form-label">🎯 {{ tt('config.problemScenario') }}</label>
           <select v-model="config.problemScenario" :disabled="sessionActive">
-            <option value="delivery_delay">{{ _t('config.scenarioOptions.delivery_delay') }}</option>
-            <option value="poor_collab">{{ _t('config.scenarioOptions.poor_collab') }}</option>
-            <option value="lack_initiative">{{ _t('config.scenarioOptions.lack_initiative') }}</option>
-            <option value="quality_issue">{{ _t('config.scenarioOptions.quality_issue') }}</option>
-            <option value="attitude">{{ _t('config.scenarioOptions.attitude') }}</option>
+            <option value="delivery_delay">{{ tt('config.scenarioOptions.delivery_delay') }}</option>
+            <option value="poor_collab">{{ tt('config.scenarioOptions.poor_collab') }}</option>
+            <option value="lack_initiative">{{ tt('config.scenarioOptions.lack_initiative') }}</option>
+            <option value="quality_issue">{{ tt('config.scenarioOptions.quality_issue') }}</option>
+            <option value="attitude">{{ tt('config.scenarioOptions.attitude') }}</option>
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">📝 {{ _t('config.customContext') }}</label>
+          <label class="form-label">📝 {{ tt('config.customContext') }}</label>
           <textarea v-model="config.customContext" :disabled="sessionActive"
-            :placeholder="_t('config.customContextPlaceholder')"></textarea>
+            :placeholder="tt('config.customContextPlaceholder')"></textarea>
         </div>
         <button class="btn-start" :class="{ running: sessionActive }"
           @click="sessionActive ? endSession() : startSession()">
-          <template v-if="!sessionActive">🚀 {{ _t('config.startBtn') }}</template>
-          <template v-else>⏹️ {{ _t('config.endBtn') }}</template>
+          <template v-if="!sessionActive">🚀 {{ tt('config.startBtn') }}</template>
+          <template v-else>⏹️ {{ tt('config.endBtn') }}</template>
         </button>
       </div>
 
       <div class="tips-card">
-        <h3>💡 {{ _t('tips.title') }}</h3>
+        <h3>💡 {{ tt('tips.title') }}</h3>
         <ul>
-          <li>{{ _t('tips.t1') }}</li>
-          <li>{{ _t('tips.t2') }}</li>
-          <li>{{ _t('tips.t3') }}</li>
-          <li>{{ _t('tips.t4') }}</li>
-          <li>{{ _t('tips.t5') }}</li>
+          <li>{{ tt('tips.t1') }}</li>
+          <li>{{ tt('tips.t2') }}</li>
+          <li>{{ tt('tips.t3') }}</li>
+          <li>{{ tt('tips.t4') }}</li>
+          <li>{{ tt('tips.t5') }}</li>
         </ul>
       </div>
 
       <div class="config-card" style="padding: 16px 20px;">
-        <h3 style="margin-bottom: 10px;">🏅 {{ _t('dimensions.title') }}</h3>
+        <h3 style="margin-bottom: 10px;">🏅 {{ tt('dimensions.title') }}</h3>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">
-          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ _t('dimensions.d1') }}</span>
-          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ _t('dimensions.d2') }}</span>
-          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ _t('dimensions.d3') }}</span>
-          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ _t('dimensions.d4') }}</span>
-          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ _t('dimensions.d5') }}</span>
+          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ tt('dimensions.d1') }}</span>
+          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ tt('dimensions.d2') }}</span>
+          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ tt('dimensions.d3') }}</span>
+          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ tt('dimensions.d4') }}</span>
+          <span style="background:#e8f8f2;color:#00a870;padding:4px 10px;border-radius:12px;font-size:12px;">✓ {{ tt('dimensions.d5') }}</span>
         </div>
       </div>
     </aside>
@@ -380,17 +380,17 @@
         <div class="chat-header-title">
           <span class="dot" :class="{ active: sessionActive }"></span>
           <template v-if="sessionActive">
-            {{ _t('chat.talkingWith', { name: getEmployeeName() }) }}
+            {{ tt('chat.talkingWith', { name: getEmployeeName() }) }}
             <span class="employee-mood" :class="empState.mood">{{ moodLabel }}</span>
           </template>
-          <template v-else>{{ _t('chat.waiting') }}</template>
+          <template v-else>{{ tt('chat.waiting') }}</template>
         </div>
-        <div v-if="sessionActive" class="chat-round-badge">{{ _t('chat.round', { n: managerMsgCount }) }}</div>
+        <div v-if="sessionActive" class="chat-round-badge">{{ tt('chat.round', { n: managerMsgCount }) }}</div>
         <div class="ai-status-indicator" :class="aiChecking ? 'connecting' : (aiConnected ? 'connected' : 'disconnected')"
-             @click="!aiChecking && checkAIConnection()" :title="aiConnected ? _t('ai.recheckHint') : _t('ai.reconnectHint')"
+             @click="!aiChecking && checkAIConnection()" :title="aiConnected ? tt('ai.recheckHint') : tt('ai.reconnectHint')"
              style="cursor: pointer; user-select: none;">
           <span class="ai-status-dot"></span>
-          <span>{{ aiChecking ? _t('ai.connecting') : (aiConnected ? _t('ai.connected') : (aiError || _t('ai.disconnected'))) }}</span>
+          <span>{{ aiChecking ? tt('ai.connecting') : (aiConnected ? tt('ai.connected') : (aiError || tt('ai.disconnected'))) }}</span>
         </div>
       </div>
 
@@ -399,46 +399,46 @@
           class="msg-row"
           :class="msg.role === 'manager' ? 'me' : msg.role === 'system' ? 'system-row' : 'them'">
           <div v-if="msg.role !== 'system'" class="msg-avatar" :class="msg.role">
-            {{ msg.role === 'manager' ? _t('chat.avatarManager') : _t('chat.avatarEmployee') }}
+            {{ msg.role === 'manager' ? tt('chat.avatarManager') : tt('chat.avatarEmployee') }}
           </div>
           <div v-else class="msg-avatar system">📋</div>
           <div>
             <div class="msg-bubble">{{ msg.content }}</div>
             <div class="msg-meta">
-              {{ msg.role === 'manager' ? _t('chat.metaManager') : msg.role === 'system' ? _t('chat.metaSystem') : getEmployeeName() }}
+              {{ msg.role === 'manager' ? tt('chat.metaManager') : msg.role === 'system' ? tt('chat.metaSystem') : getEmployeeName() }}
             </div>
           </div>
         </div>
         <div v-if="employeeTyping" class="msg-row them">
-          <div class="msg-avatar employee">{{ _t('chat.avatarEmployee') }}</div>
+          <div class="msg-avatar employee">{{ tt('chat.avatarEmployee') }}</div>
           <div class="msg-bubble" style="color:#8f959e;">{{ typingDots }}</div>
         </div>
       </div>
 
       <div v-else class="welcome-state">
         <div class="emoji">🎯</div>
-        <h2>{{ _t('welcome.title') }}</h2>
+        <h2>{{ tt('welcome.title') }}</h2>
         <p>
           <template v-if="aiEnabled && aiConnected">
-            🤖 <strong>{{ _t('welcome.aiMode') }}</strong> — {{ _t('welcome.aiDesc') }}<br><br>
+            🤖 <strong>{{ tt('welcome.aiMode') }}</strong> — {{ tt('welcome.aiDesc') }}<br><br>
           </template>
-          {{ _t('welcome.desc1') }}<br><br>
-          {{ _t('welcome.desc2') }}
+          {{ tt('welcome.desc1') }}<br><br>
+          {{ tt('welcome.desc2') }}
         </p>
       </div>
 
       <div class="quick-actions" v-if="sessionActive && !showEval">
-        <button class="quick-action-btn" @click="sendQuick(_t('quickActions.greeting'))">{{ _t('quickActions.greetingLabel') }}</button>
-        <button class="quick-action-btn" @click="sendQuick(_t('quickActions.listen'))">{{ _t('quickActions.listenLabel') }}</button>
-        <button class="quick-action-btn" @click="sendQuick(_t('quickActions.guide'))">{{ _t('quickActions.guideLabel') }}</button>
-        <button class="quick-action-btn" @click="sendQuick(_t('quickActions.end'))">{{ _t('quickActions.endLabel') }}</button>
+        <button class="quick-action-btn" @click="sendQuick(tt('quickActions.greeting'))">{{ tt('quickActions.greetingLabel') }}</button>
+        <button class="quick-action-btn" @click="sendQuick(tt('quickActions.listen'))">{{ tt('quickActions.listenLabel') }}</button>
+        <button class="quick-action-btn" @click="sendQuick(tt('quickActions.guide'))">{{ tt('quickActions.guideLabel') }}</button>
+        <button class="quick-action-btn" @click="sendQuick(tt('quickActions.end'))">{{ tt('quickActions.endLabel') }}</button>
       </div>
 
       <div class="chat-input-area" v-if="sessionActive && !showEval">
-        <textarea v-model="userInput" :placeholder="_t('chat.inputPlaceholder')"
+        <textarea v-model="userInput" :placeholder="tt('chat.inputPlaceholder')"
           @keydown.enter.exact.prevent="sendMessage" :disabled="employeeTyping" ref="inputBox" rows="1">
         </textarea>
-        <button class="btn-send" @click="sendMessage" :disabled="!userInput.trim() || employeeTyping">{{ _t('chat.send') }}</button>
+        <button class="btn-send" @click="sendMessage" :disabled="!userInput.trim() || employeeTyping">{{ tt('chat.send') }}</button>
       </div>
     </main>
 
@@ -446,7 +446,7 @@
     <div class="eval-overlay" v-if="showEval">
     <div class="eval-panel">
       <div class="eval-panel-header">
-        <h2>📊 {{ _t('eval.title') }}</h2>
+        <h2>📊 {{ tt('eval.title') }}</h2>
         <button class="eval-close" @click="closeEval">✕</button>
       </div>
       <div class="eval-panel-body">
@@ -455,15 +455,15 @@
           <div class="eval-score-big" :class="evalResult.score >= 4 ? 'high' : evalResult.score >= 2.5 ? 'mid' : 'low'">
             {{ evalResult.score.toFixed(1) }}
           </div>
-          <div class="eval-score-label">{{ _t('eval.scoreLabel') }}</div>
+          <div class="eval-score-label">{{ tt('eval.scoreLabel') }}</div>
           <div style="margin-top:6px;">
-            <span v-if="evalResult.score >= 4" style="color:#00a870;font-weight:600;">🌟 {{ _t('eval.great') }}</span>
-            <span v-else-if="evalResult.score >= 2.5" style="color:#ed7b2f;font-weight:600;">📖 {{ _t('eval.roomForImprovement') }}</span>
-            <span v-else style="color:#e34d59;font-weight:600;">⚠️ {{ _t('eval.needsWork') }}</span>
+            <span v-if="evalResult.score >= 4" style="color:#00a870;font-weight:600;">🌟 {{ tt('eval.great') }}</span>
+            <span v-else-if="evalResult.score >= 2.5" style="color:#ed7b2f;font-weight:600;">📖 {{ tt('eval.roomForImprovement') }}</span>
+            <span v-else style="color:#e34d59;font-weight:600;">⚠️ {{ tt('eval.needsWork') }}</span>
           </div>
         </div>
         <div class="eval-section">
-          <h4>🔍 {{ _t('eval.dimensionAnalysis') }}</h4>
+          <h4>🔍 {{ tt('eval.dimensionAnalysis') }}</h4>
           <div class="eval-tags">
             <span v-for="dim in evalResult.dimensions" :key="dim.name" class="eval-tag" :class="dim.covered ? 'done' : 'missed'">
               {{ dim.covered ? '✅' : '❌' }} {{ dim.name }}
@@ -471,23 +471,23 @@
           </div>
         </div>
         <div class="eval-section" v-if="evalResult.missingActions.length > 0">
-          <h4>📌 {{ _t('eval.missingActions') }}</h4>
+          <h4>📌 {{ tt('eval.missingActions') }}</h4>
           <div v-for="(action, i) in evalResult.missingActions" :key="i"
             class="eval-tip" style="border-left-color:#ed7b2f;background:#fff7e8;">
             <strong>{{ action.label }}：</strong>{{ action.description }}
           </div>
         </div>
         <div class="eval-section" v-if="evalResult.pitfalls.length > 0">
-          <h4>⚠️ {{ _t('eval.pitfalls') }}</h4>
+          <h4>⚠️ {{ tt('eval.pitfalls') }}</h4>
           <div class="eval-tags">
             <span v-for="p in evalResult.pitfalls" :key="p" class="eval-tag pitfall">{{ p }}</span>
           </div>
         </div>
         <div class="eval-section">
-          <h4>💡 {{ _t('eval.suggestions') }}</h4>
+          <h4>💡 {{ tt('eval.suggestions') }}</h4>
           <div v-for="(tip, i) in evalResult.suggestions" :key="i" class="eval-tip">{{ tip }}</div>
         </div>
-        <button class="btn-restart" @click="restartSession">🔄 {{ _t('eval.restart') }}</button>
+        <button class="btn-restart" @click="restartSession">🔄 {{ tt('eval.restart') }}</button>
       </div>
     </div>
   </div>
@@ -1126,7 +1126,7 @@ createApp({
 
   },
   methods: {
-    _t(key, params) {
+    tt(key, params) {
       const keys = key.split('.');
       let val = I18N[this.lang];
       for (const k of keys) {
@@ -1146,13 +1146,13 @@ createApp({
     toggleLang() {
       this.lang = this.lang === 'zh' ? 'en' : 'zh';
       localStorage.setItem('lang', this.lang);
-      document.title = this._t('header.title');
+      document.title = this.tt('header.title');
       document.documentElement.lang = this.lang === 'zh' ? 'zh-CN' : 'en';
     },
   },
   mounted() {
     // 初始化语言设置
-    document.title = this._t('header.title');
+    document.title = this.tt('header.title');
     document.documentElement.lang = this.lang === 'zh' ? 'zh-CN' : 'en';
     // 页面加载时自动连接 AI
     this.checkAIConnection();
